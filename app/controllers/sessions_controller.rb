@@ -3,6 +3,7 @@ class SessionsController < ApplicationController
   end
 
   def create
+
     user = User.find_by(name: params[:user][:name])
 
     user = user.try(:authenticate, params[:user][:password])
