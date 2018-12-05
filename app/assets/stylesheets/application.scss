@@ -1,4 +1,3 @@
-
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
@@ -18,9 +17,14 @@ body {
   margin: 5px 0;
 }
 
-.card-container {
-
-}
+ .card {
+   background-color: #EEE;
+   border-radius: 5px;
+   padding: 10px;
+   margin: 10px;
+   display: inline-block;
+   vertical-align: middle;
+ }
 
 .navbar-inverse .navbar-brand {
   color: #85bb65;
