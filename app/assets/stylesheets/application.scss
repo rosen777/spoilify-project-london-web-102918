@@ -1,41 +1,22 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
- /* // Custom bootstrap variables must be set or imported *before* bootstrap. */
- @import "bootstrap";
 
- // body {
- //   padding-top: 70px;
- //   padding-bottom: 30px;
- // }
- //
- // .theme-dropdown .dropdown-menu {
- //   position: static;
- //   display: block;
- //   margin-bottom: 20px;
- // }
- //
- // .theme-showcase > p > .btn {
- //   margin: 5px 0;
- // }
- //
- // .card-container {
- //
- // }
- //
+body {
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.theme-showcase > p > .btn {
+  margin: 5px 0;
+}
+
  .card {
    background-color: #EEE;
    border-radius: 5px;
@@ -44,12 +25,11 @@
    display: inline-block;
    vertical-align: middle;
  }
- //
- // .pond-card {
- //   width: 320px;
- // }
- //
- // .notice {
- //   width: 100%;
- //   color: red;
- // }
+
+.navbar-inverse .navbar-brand {
+  color: #85bb65;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #85bb65;
+}
