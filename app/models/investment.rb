@@ -12,4 +12,10 @@ class Investment < ApplicationRecord
       result = i
   end
 
+  # url = "https://api.iextrading.com/1.0/stock/market/collection/sector?collectionName=Technology"
+  # response_string = RestClient.get(url)
+  # response_hash = JSON.parse(response_string)
+  # sorted_by_cap = response_hash.sort_by {|t| t{["marketCap"]}
+  # top10_ordered = sorted_by_cap.reverse[0..9]
+  #
 end
