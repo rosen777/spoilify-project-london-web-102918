@@ -16,3 +16,40 @@
 
  /* // Custom bootstrap variables must be set or imported *before* bootstrap. */
  @import "bootstrap";
+
+ // body {
+ //   padding-top: 70px;
+ //   padding-bottom: 30px;
+ // }
+ //
+ // .theme-dropdown .dropdown-menu {
+ //   position: static;
+ //   display: block;
+ //   margin-bottom: 20px;
+ // }
+ //
+ // .theme-showcase > p > .btn {
+ //   margin: 5px 0;
+ // }
+ //
+ // .card-container {
+ //
+ // }
+ //
+ .card {
+   background-color: #EEE;
+   border-radius: 5px;
+   padding: 10px;
+   margin: 10px;
+   display: inline-block;
+   vertical-align: middle;
+ }
+ //
+ // .pond-card {
+ //   width: 320px;
+ // }
+ //
+ // .notice {
+ //   width: 100%;
+ //   color: red;
+ // }
