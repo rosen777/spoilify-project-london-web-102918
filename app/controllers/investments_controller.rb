@@ -1,4 +1,5 @@
 class InvestmentsController < ApplicationController
+before_action :require_log_in
   def index
     @investments = Investment.all
   end

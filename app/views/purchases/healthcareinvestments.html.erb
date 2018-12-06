@@ -2,7 +2,7 @@
 
     <% @healthcareinvestments.each do |healthcareinvestment| %>
       <div class="card">
-        <p><a href="/healthcareinvestments/<%= healthcareinvestment.id %>"><%= healthcareinvestment.name %></a></p>
+        <p><a href="/investments/<%= healthcareinvestment.id %>"><%= healthcareinvestment.name %></a></p>
         <p>Current Price: <%= healthcareinvestment.price %></p>
         <p>Industry Sector: <%= healthcareinvestment.sector %></p>
       </div>

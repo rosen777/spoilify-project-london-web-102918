@@ -2,7 +2,7 @@
 
     <% @consumerdefensiveinvestments.each do |consumerdefensiveinvestment| %>
       <div class="card">
-        <p><a href="/consumerdefensiveinvestments/<%= consumerdefensiveinvestment.id %>"><%= consumerdefensiveinvestment.name %></a></p>
+        <p><a href="/investments/<%= consumerdefensiveinvestment.id %>"><%= consumerdefensiveinvestment.name %></a></p>
         <p>Current Price: <%= consumerdefensiveinvestment.price %></p>
         <p>Industry Sector: <%= consumerdefensiveinvestment.sector %></p>
       </div>

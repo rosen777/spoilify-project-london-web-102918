@@ -2,7 +2,7 @@
 
     <% @energyinvestments.each do |energyinvestment| %>
       <div class="card">
-        <p><a href="/energyinvestments/<%= energyinvestment.id %>"><%= energyinvestment.name %></a></p>
+        <p><a href="/investments/<%= energyinvestment.id %>"><%= energyinvestment.name %></a></p>
         <p>Current Price: <%= energyinvestment.price %></p>
         <p>Industry Sector: <%= energyinvestment.sector %></p>
       </div>
