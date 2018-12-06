@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :user_purchases
   resources :investments
   get 'welcome/home'
 

@@ -9,7 +9,7 @@ class Investment < ApplicationRecord
   belongs_to :purchase
 
   def self.biggest_investment
-    i = Investment.all.map{|i| [i.name, i.price]}
+    i = Investment.all.map{|i| [i.name[0..25], i.price]}[0..5]
       result = []
       result = i
   end
