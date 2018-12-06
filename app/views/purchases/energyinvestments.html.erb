@@ -1,0 +1,9 @@
+<h1 style= "color:#85bb65">Energy Investments</h1>
+
+    <% @energyinvestments.each do |energyinvestment| %>
+      <div class="card">
+        <p><a href="/energyinvestments/<%= energyinvestment.id %>"><%= energyinvestment.name %></a></p>
+        <p>Current Price: <%= energyinvestment.price %></p>
+        <p>Industry Sector: <%= energyinvestment.sector %></p>
+      </div>
+    <% end %>
