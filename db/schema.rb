@@ -10,22 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_06_112402) do
-
-  create_table "charities", force: :cascade do |t|
-    t.text "name"
-    t.string "description"
-    t.integer "personoutreach"
-    t.string "country"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 2018_12_06_120430) do
 
   create_table "investments", force: :cascade do |t|
     t.string "name"
     t.integer "price"
     t.string "sector"
     t.integer "purchase_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["purchase_id"], name: "index_investments_on_purchase_id"
   end
 
