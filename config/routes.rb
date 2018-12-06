@@ -20,4 +20,8 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   get '/energyinvestments' => 'purchases#energyinvestments'
+  get '/healthcareinvestments' => 'purchases#healthcareinvestments'
+  get '/technologyinvestments' => 'purchases#technologyinvestments'
+  get '/consumerdefensiveinvestments' => 'purchases#consumerdefensiveinvestments'
+  get '/consumercyclicalinvestments' => 'purchases#consumercyclicalinvestments'
 end

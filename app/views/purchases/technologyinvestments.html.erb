@@ -1,0 +1,9 @@
+<h1 style= "color:#85bb65">technology Investments</h1>
+
+    <% @technologyinvestments.each do |technologyinvestment| %>
+      <div class="card">
+        <p><a href="/technologyinvestments/<%= technologyinvestment.id %>"><%= technologyinvestment.name %></a></p>
+        <p>Current Price: <%= technologyinvestment.price %></p>
+        <p>Industry Sector: <%= technologyinvestment.sector %></p>
+      </div>
+    <% end %>
