@@ -24,3 +24,7 @@
 <br>
 <%= link_to "Buy #{@investment.name}", "/welcome/home",
             :class=>"btn btn-primary" %>
+
+<%= link_to(controller: 'user_investments', action: 'new') { "Buy #{@investment.name}"} %>
+
+<%= link_to "Buy #{@investment.name}", user_investments_path(@investment.id, user_id: session[:user_id], investment_id: "#{@investment.id}"), method: :post %>
