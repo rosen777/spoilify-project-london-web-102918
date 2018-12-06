@@ -19,10 +19,6 @@ Purchase.destroy_all
 # # To get the latest price
 # StockQuote::Stock.raw_quote("AAPL")["AAPL"]["quote"]["latestPrice"]
 
-applecurrent = Investment.create(name: "applecurrent", price: StockQuote::Stock.raw_quote("AAPL")["AAPL"]["quote"]["latestPrice"], country: "US")
-applelow = Investment.create(name: "applelow", price: StockQuote::Stock.raw_quote("AAPL")["AAPL"]["quote"]["week52Low"], country: "US")
-applehigh = Investment.create(name: "appleh", price: StockQuote::Stock.raw_quote("AAPL")["AAPL"]["quote"]["week52High"], country: "US")
-
 # Purchases images
 # Catellan Golden Toilet
 # https://i.ytimg.com/vi/IWGj8CvH82E/maxresdefault.jpg
@@ -44,3 +40,34 @@ shoes = Purchase.create(name: "Nike Air MAG BTTF Edition", price: 37654, country
 watch = Purchase.create(name: "Montegrappa Chaos Golden", price: 52985, country: "Uzbekistan", imgsrc: "https://whichwatch.org/wp-content/uploads/2015/12/Montegrappa-Chaos-Gold-Watch.jpg")
 jet = Purchase.create(name: "Custom Boeing 747-8I", price: 27000000, country: "USA", imgsrc: "http://3.bp.blogspot.com/-gudqlEhcOp4/UOVKp_FH1YI/AAAAAAAAAy8/uRJTEllJ-Gk/s640/private-jet-interiors.jpg")
 jetpack = Purchase.create(name: "Jetsuit by Gravity Industries", price: 340000, country: "UK", imgsrc: "https://static.highsnobiety.com/wp-content/uploads/2018/07/27210700/gravity-industries-jet-suit-001-480x320.jpg")
+
+energyall = Investment.investment_energy2
+energystock0 = Investment.create(name: energyall[0][1], price: energyall[0][2], purchase: jet, sector: "Energy")
+energystock1 = Investment.create(name: energyall[1][1], price: energyall[1][2], purchase: jet, sector: "Energy")
+energystock2 = Investment.create(name: energyall[2][1], price: energyall[2][2], purchase: jet, sector: "Energy")
+energystock3 = Investment.create(name: energyall[3][1], price: energyall[3][2], purchase: jet, sector: "Energy")
+energystock4 = Investment.create(name: energyall[4][1], price: energyall[4][2], purchase: jet, sector: "Energy")
+
+# healthcarestock0 = Investment.create(name: top10_ordered_healthcare_name[0], price: top10_ordered_healthcare_price[0], purchase: toilet, sector: "Health Care")
+# healthcarestock1 = Investment.create(name: top10_ordered_healthcare_name[1], price: top10_ordered_healthcare_price[1], purchase: toilet, sector: "Health Care")
+# healthcarestock2 = Investment.create(name: top10_ordered_healthcare_name[2], price: top10_ordered_healthcare_price[2], purchase: toilet, sector: "Health Care")
+# healthcarestock3 = Investment.create(name: top10_ordered_healthcare_name[3], price: top10_ordered_healthcare_price[3], purchase: toilet, sector: "Health Care")
+# healthcarestock4 = Investment.create(name: top10_ordered_healthcare_name[4], price: top10_ordered_healthcare_price[4], purchase: toilet, sector: "Health Care")
+#
+# constaplesstock0 = Investment.create(name: top10_ordered_constaples_name[0], price: top10_ordered_constaples_price[0], purchase: shoes, sector: "Consumer Staples")
+# constaplesstock1 = Investment.create(name: top10_ordered_constaples_name[1], price: top10_ordered_constaples_price[1], purchase: shoes, sector: "Consumer Staples")
+# constaplesstock2 = Investment.create(name: top10_ordered_constaples_name[2], price: top10_ordered_constaples_price[2], purchase: shoes, sector: "Consumer Staples")
+# constaplesstock3 = Investment.create(name: top10_ordered_constaples_name[3], price: top10_ordered_constaples_price[3], purchase: shoes, sector: "Consumer Staples")
+# constaplesstock4 = Investment.create(name: top10_ordered_constaples_name[4], price: top10_ordered_constaples_price[4], purchase: shoes, sector: "Consumer Staples")
+#
+# condiscretstock0 = Investment.create(name: top10_ordered_condiscret_name[0], price: top10_ordered_condiscret_price[0], purchase: watch, sector: "Consumer Discretionary")
+# condiscretstock1 = Investment.create(name: top10_ordered_condiscret_name[1], price: top10_ordered_condiscret_price[1], purchase: watch, sector: "Consumer Discretionary")
+# condiscretstock2 = Investment.create(name: top10_ordered_condiscret_name[2], price: top10_ordered_condiscret_price[2], purchase: watch, sector: "Consumer Discretionary")
+# condiscretstock3 = Investment.create(name: top10_ordered_condiscret_name[3], price: top10_ordered_condiscret_price[3], purchase: watch, sector: "Consumer Discretionary")
+# condiscretstock4 = Investment.create(name: top10_ordered_condiscret_name[4], price: top10_ordered_condiscret_price[4], purchase: watch, sector: "Consumer Discretionary")
+#
+# technologystock0 = Investment.create(name: top10_ordered_technology_name[0], price: top10_ordered_technology_price[0], purchase: jetpack, sector: "Technology")
+# technologystock1 = Investment.create(name: top10_ordered_technology_name[1], price: top10_ordered_technology_price[1], purchase: jetpack, sector: "Technology")
+# technologystock2 = Investment.create(name: top10_ordered_technology_name[2], price: top10_ordered_technology_price[2], purchase: jetpack, sector: "Technology")
+# technologystock3 = Investment.create(name: top10_ordered_technology_name[3], price: top10_ordered_technology_price[3], purchase: jetpack, sector: "Technology")
+# technologystock4 = Investment.create(name: top10_ordered_technology_name[4], price: top10_ordered_technology_price[4], purchase: jetpack, sector: "Technology")
