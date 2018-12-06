@@ -16,14 +16,12 @@ class Investment < ApplicationRecord
   url = "https://api.iextrading.com/1.0/stock/market/collection/sector?collectionName=Energy"
   response_string = RestClient.get(url)
   response_hash = JSON.parse(response_string)
-  sorted_by_cap = response_hash.sort_by {|t| t["marketCap"]}
-  top10_ordered = sorted_by_cap.reverse[0..9]
-  arr= []
-  # top10_ordered.map {|s| s["marketCap"]}
-  # top10_ordered.map {|s| s["companyName"]}
-  top10_ordered.map do |s| s["marketCap"]
-    arr =
-     "#{s['marketCap']}, #{s['companyName']}"
+  array_of_hashes = response_hash.select { |m| m["marketCap"] != nil }
+  sorted_by_cap = array_of_hashes.sort_by {|t| t["marketCap"]}
+  top10_ordered = sorted_by_cap.reverse[0..4]
+  arr = []
+  top10_ordered.map do |s|
+    arr = [ s["marketCap"], s["companyName"] ]
   end
 end
 
@@ -31,77 +29,52 @@ end
   url = "https://api.iextrading.com/1.0/stock/market/collection/sector?collectionName=Health%20Care"
   response_string = RestClient.get(url)
   response_hash = JSON.parse(response_string)
-  sorted_by_cap = response_hash.sort_by {|t| t["marketCap"]}
-  top10_ordered = sorted_by_cap.reverse[0..9]
+  array_of_hashes = response_hash.select { |m| m["marketCap"] != nil }
+  sorted_by_cap = array_of_hashes.sort_by {|t| t["marketCap"]}
+  top10_ordered = sorted_by_cap.reverse[0..4]
   arr= []
-  # top10_ordered.map {|s| s["marketCap"]}
-  # top10_ordered.map {|s| s["companyName"]}
   top10_ordered.map do |s| s["marketCap"]
-    arr =
-     "#{s['marketCap']}, #{s['companyName']}"
+    arr = [ s["marketCap"], s["companyName"] ]
   end
 end
 
-def self.investment_energy
-url = "https://api.iextrading.com/1.0/stock/market/collection/sector?collectionName=Energy"
-response_string = RestClient.get(url)
-response_hash = JSON.parse(response_string)
-sorted_by_cap = response_hash.sort_by {|t| t["marketCap"]}
-top10_ordered = sorted_by_cap.reverse[0..9]
-arr= []
-# top10_ordered.map {|s| s["marketCap"]}
-# top10_ordered.map {|s| s["companyName"]}
-top10_ordered.map do |s| s["marketCap"]
-  arr =
-   "#{s['marketCap']}, #{s['companyName']}"
-end
-end
-
 def self.investment_technology
-url = "https://api.iextrading.com/1.0/stock/market/collection/sector?collectionName=Technology"
-response_string = RestClient.get(url)
-response_hash = JSON.parse(response_string)
-sorted_by_cap = response_hash.sort_by {|t| t["marketCap"]}
-top10_ordered = sorted_by_cap.reverse[0..9]
-arr= []
-# top10_ordered.map {|s| s["marketCap"]}
-# top10_ordered.map {|s| s["companyName"]}
-top10_ordered.map do |s| s["marketCap"]
-  arr =
-   "#{s['marketCap']}, #{s['companyName']}"
+  url = "https://api.iextrading.com/1.0/stock/market/collection/sector?collectionName=Technology"
+  response_string = RestClient.get(url)
+  response_hash = JSON.parse(response_string)
+  array_of_hashes = response_hash.select { |m| m["marketCap"] != nil  }
+  sorted_by_cap = array_of_hashes.sort_by {|t| t["marketCap"]}
+  top10_ordered = sorted_by_cap.reverse[0..4]
+  arr= []
+  top10_ordered.map do |s| s["marketCap"]
+  arr = [ s['marketCap'], s['companyName'] ]
 end
 end
 
 def self.investment_consumer_defensive
-url = "https://api.iextrading.com/1.0/stock/market/collection/sector?collectionName=Consumer%20Defensive"
-response_string = RestClient.get(url)
-response_hash = JSON.parse(response_string)
-sorted_by_cap = response_hash.sort_by {|t| t["marketCap"]}
-top10_ordered = sorted_by_cap.reverse[0..9]
-arr= []
-# top10_ordered.map {|s| s["marketCap"]}
-# top10_ordered.map {|s| s["companyName"]}
-top10_ordered.map do |s| s["marketCap"]
-  arr =
-   "#{s['marketCap']}, #{s['companyName']}"
+  url = "https://api.iextrading.com/1.0/stock/market/collection/sector?collectionName=Consumer%20Defensive"
+  response_string = RestClient.get(url)
+  response_hash = JSON.parse(response_string)
+  array_of_hashes = response_hash.select { |m| m["marketCap"] != nil }
+  sorted_by_cap = array_of_hashes.sort_by {|t| t["marketCap"]}
+  top10_ordered = sorted_by_cap.reverse[0..4]
+  arr= []
+  top10_ordered.map do |s| s["marketCap"]
+  arr = [ s['marketCap'], s['companyName'] ]
 end
 end
 
 def self.investment_consumer_cyclical
-url = "https://api.iextrading.com/1.0/stock/market/collection/sector?collectionName=Consumer%20Cyclical"
-response_string = RestClient.get(url)
-response_hash = JSON.parse(response_string)
-sorted_by_cap = response_hash.sort_by {|t| t["marketCap"]}
-top10_ordered = sorted_by_cap.reverse[0..9]
-arr= []
-# top10_ordered.map {|s| s["marketCap"]}
-# top10_ordered.map {|s| s["companyName"]}
-top10_ordered.map do |s| s["marketCap"]
-  arr =
-   "#{s['marketCap']}, #{s['companyName']}"
+    url = "https://api.iextrading.com/1.0/stock/market/collection/sector?collectionName=Consumer%20Cyclical"
+    response_string = RestClient.get(url)
+    response_hash = JSON.parse(response_string)
+    array_of_hashes = response_hash.select { |m| m["marketCap"] != nil }
+    sorted_by_cap = array_of_hashes.sort_by {|t| t["marketCap"]}
+    top10_ordered = sorted_by_cap.reverse[0..4]
+    arr= []
+    top10_ordered.map do |s| s["marketCap"]
+    arr = [ s['marketCap'], s['companyName'] ]
 end
 end
-
-
 
 end
