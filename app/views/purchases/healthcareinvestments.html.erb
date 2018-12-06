@@ -1,0 +1,9 @@
+<h1 style= "color:#85bb65">healthcare Investments</h1>
+
+    <% @healthcareinvestments.each do |healthcareinvestment| %>
+      <div class="card">
+        <p><a href="/healthcareinvestments/<%= healthcareinvestment.id %>"><%= healthcareinvestment.name %></a></p>
+        <p>Current Price: <%= healthcareinvestment.price %></p>
+        <p>Industry Sector: <%= healthcareinvestment.sector %></p>
+      </div>
+    <% end %>

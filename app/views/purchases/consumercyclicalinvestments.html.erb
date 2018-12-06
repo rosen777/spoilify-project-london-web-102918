@@ -1,0 +1,9 @@
+<h1 style= "color:#85bb65">consumercyclical Investments</h1>
+
+    <% @consumercyclicalinvestments.each do |consumercyclicalinvestment| %>
+      <div class="card">
+        <p><a href="/consumercyclicalinvestments/<%= consumercyclicalinvestment.id %>"><%= consumercyclicalinvestment.name %></a></p>
+        <p>Current Price: <%= consumercyclicalinvestment.price %></p>
+        <p>Industry Sector: <%= consumercyclicalinvestment.sector %></p>
+      </div>
+    <% end %>

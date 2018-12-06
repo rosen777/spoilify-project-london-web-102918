@@ -47,18 +47,18 @@ technologyall = Investment.investment_technology2
 consumer_defensiveall = Investment.investment_consumer_defensive2
 consumer_cyclicalall = Investment.investment_consumer_cyclical2
 
-energystock0 = Investment.create(name: energyall[0][1][0..25], price: energyall[0][2], purchase: jet, sector: "Energy")
-energystock1 = Investment.create(name: energyall[1][1][0..25], price: energyall[1][2], purchase: jet, sector: "Energy")
-energystock2 = Investment.create(name: energyall[2][1][0..25], price: energyall[2][2], purchase: jet, sector: "Energy")
-energystock3 = Investment.create(name: energyall[3][1][0..25], price: energyall[3][2], purchase: jet, sector: "Energy")
-energystock4 = Investment.create(name: energyall[4][1][0..25], price: energyall[4][2], purchase: jet, sector: "Energy")
+energystock0 = Investment.create(name: energyall[0][1][0..25], price: energyall[0][2], purchase: jet, sector: "energy")
+energystock1 = Investment.create(name: energyall[1][1][0..25], price: energyall[1][2], purchase: jet, sector: "energy")
+energystock2 = Investment.create(name: energyall[2][1][0..25], price: energyall[2][2], purchase: jet, sector: "energy")
+energystock3 = Investment.create(name: energyall[3][1][0..25], price: energyall[3][2], purchase: jet, sector: "energy")
+energystock4 = Investment.create(name: energyall[4][1][0..25], price: energyall[4][2], purchase: jet, sector: "energy")
 
 
-health_carestock0 = Investment.create(name: health_careall[0][1][0..25], price: health_careall[0][2], purchase: toilet, sector: "health_care")
-health_carestock1 = Investment.create(name: health_careall[1][1][0..25], price: health_careall[1][2], purchase: toilet, sector: "health_care")
-health_carestock2 = Investment.create(name: health_careall[2][1][0..25], price: health_careall[2][2], purchase: toilet, sector: "health_care")
-health_carestock3 = Investment.create(name: health_careall[3][1][0..25], price: health_careall[3][2], purchase: toilet, sector: "health_care")
-health_carestock4 = Investment.create(name: health_careall[4][1][0..25], price: health_careall[4][2], purchase: toilet, sector: "health_care")
+health_carestock0 = Investment.create(name: health_careall[0][1][0..25], price: health_careall[0][2], purchase: toilet, sector: "healthcare")
+health_carestock1 = Investment.create(name: health_careall[1][1][0..25], price: health_careall[1][2], purchase: toilet, sector: "healthcare")
+health_carestock2 = Investment.create(name: health_careall[2][1][0..25], price: health_careall[2][2], purchase: toilet, sector: "healthcare")
+health_carestock3 = Investment.create(name: health_careall[3][1][0..25], price: health_careall[3][2], purchase: toilet, sector: "healthcare")
+health_carestock4 = Investment.create(name: health_careall[4][1][0..25], price: health_careall[4][2], purchase: toilet, sector: "healthcare")
 
 
 technologystock0 = Investment.create(name: technologyall[0][1][0..25], price: technologyall[0][2], purchase: jetpack, sector: "technology")
@@ -68,15 +68,15 @@ technologystock3 = Investment.create(name: technologyall[3][1][0..25], price: te
 technologystock4 = Investment.create(name: technologyall[4][1][0..25], price: technologyall[4][2], purchase: jetpack, sector: "technology")
 
 
-consumer_defensivestock0 = Investment.create(name: consumer_defensiveall[0][1][0..25], price: consumer_defensiveall[0][2], purchase: shoes, sector: "consumer_defensive")
-consumer_defensivestock1 = Investment.create(name: consumer_defensiveall[1][1][0..25], price: consumer_defensiveall[1][2], purchase: shoes, sector: "consumer_defensive")
-consumer_defensivestock2 = Investment.create(name: consumer_defensiveall[2][1][0..25], price: consumer_defensiveall[2][2], purchase: shoes, sector: "consumer_defensive")
-consumer_defensivestock3 = Investment.create(name: consumer_defensiveall[3][1][0..25], price: consumer_defensiveall[3][2], purchase: shoes, sector: "consumer_defensive")
-consumer_defensivestock4 = Investment.create(name: consumer_defensiveall[4][1][0..25], price: consumer_defensiveall[4][2], purchase: shoes, sector: "consumer_defensive")
+consumer_defensivestock0 = Investment.create(name: consumer_defensiveall[0][1][0..25], price: consumer_defensiveall[0][2], purchase: shoes, sector: "consumerdefensive")
+consumer_defensivestock1 = Investment.create(name: consumer_defensiveall[1][1][0..25], price: consumer_defensiveall[1][2], purchase: shoes, sector: "consumerdefensive")
+consumer_defensivestock2 = Investment.create(name: consumer_defensiveall[2][1][0..25], price: consumer_defensiveall[2][2], purchase: shoes, sector: "consumerdefensive")
+consumer_defensivestock3 = Investment.create(name: consumer_defensiveall[3][1][0..25], price: consumer_defensiveall[3][2], purchase: shoes, sector: "consumerdefensive")
+consumer_defensivestock4 = Investment.create(name: consumer_defensiveall[4][1][0..25], price: consumer_defensiveall[4][2], purchase: shoes, sector: "consumerdefensive")
 
 
-consumer_cyclicalstock0 = Investment.create(name: consumer_cyclicalall[0][1][0..25], price: consumer_cyclicalall[0][2], purchase: watch, sector: "consumer_cyclical")
-consumer_cyclicalstock1 = Investment.create(name: consumer_cyclicalall[1][1][0..25], price: consumer_cyclicalall[1][2], purchase: watch, sector: "consumer_cyclical")
-consumer_cyclicalstock2 = Investment.create(name: consumer_cyclicalall[2][1][0..25], price: consumer_cyclicalall[2][2], purchase: watch, sector: "consumer_cyclical")
-consumer_cyclicalstock3 = Investment.create(name: consumer_cyclicalall[3][1][0..25], price: consumer_cyclicalall[3][2], purchase: watch, sector: "consumer_cyclical")
-consumer_cyclicalstock4 = Investment.create(name: consumer_cyclicalall[4][1][0..25], price: consumer_cyclicalall[4][2], purchase: watch, sector: "consumer_cyclical")
+consumer_cyclicalstock0 = Investment.create(name: consumer_cyclicalall[0][1][0..25], price: consumer_cyclicalall[0][2], purchase: watch, sector: "consumercyclical")
+consumer_cyclicalstock1 = Investment.create(name: consumer_cyclicalall[1][1][0..25], price: consumer_cyclicalall[1][2], purchase: watch, sector: "consumercyclical")
+consumer_cyclicalstock2 = Investment.create(name: consumer_cyclicalall[2][1][0..25], price: consumer_cyclicalall[2][2], purchase: watch, sector: "consumercyclical")
+consumer_cyclicalstock3 = Investment.create(name: consumer_cyclicalall[3][1][0..25], price: consumer_cyclicalall[3][2], purchase: watch, sector: "consumercyclical")
+consumer_cyclicalstock4 = Investment.create(name: consumer_cyclicalall[4][1][0..25], price: consumer_cyclicalall[4][2], purchase: watch, sector: "consumercyclical")

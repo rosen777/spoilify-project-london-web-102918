@@ -63,7 +63,19 @@ class PurchasesController < ApplicationController
 
 
   def energyinvestments
-    @energyinvestments = Investment.all.select {|i| i.sector == "Energy"}
+    @energyinvestments = Investment.all.select {|i| i.sector == "energy"}
+  end
+  def healthcareinvestments
+    @healthcareinvestments = Investment.all.select {|i| i.sector == "healthcare"}
+  end
+  def technologyinvestments
+    @technologyinvestments = Investment.all.select {|i| i.sector == "technology"}
+  end
+  def consumerdefensiveinvestments
+    @consumerdefensiveinvestments = Investment.all.select {|i| i.sector == "consumerdefensive"}
+  end
+  def consumercyclicalinvestments
+    @consumercyclicalinvestments = Investment.all.select {|i| i.sector == "consumercyclical"}
   end
 
   private
