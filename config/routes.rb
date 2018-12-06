@@ -15,6 +15,6 @@ Rails.application.routes.draw do
   root 'welcome#home'
   resources :charities, only: [:index, :show, :new]
   resources :purchases
-  resources :investments, only: [:index, :show, :new]
+  resources :investments, only: [:index, :show]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
