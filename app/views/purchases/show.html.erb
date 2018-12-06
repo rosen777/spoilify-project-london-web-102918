@@ -21,6 +21,7 @@
  <%= image_tag '/assets/not-found-image.png
 ', width: "200" %>
 <% end %><br>
+<br>
 
-<%= link_to 'Edit', edit_purchase_path(@purchase) %> |
-<%= link_to 'Back', purchases_path %>
+<%= link_to "Buy #{@purchase.name}", "/#{@purchase.investments.first.sector.downcase}investments",
+            :class=>"btn btn-primary" %>

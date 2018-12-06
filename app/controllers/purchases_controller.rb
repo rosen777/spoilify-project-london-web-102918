@@ -61,6 +61,11 @@ class PurchasesController < ApplicationController
     end
   end
 
+
+  def energyinvestments
+    @energyinvestments = Investment.all.select {|i| i.sector == "Energy"}
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_purchase
