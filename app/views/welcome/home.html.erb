@@ -7,23 +7,17 @@
 
   <div class="centered">
     <br>
+    <%= link_to "Make a purchase", purchases_path,
+                :class=>"btn btn-primary" %>
+    <br>
     <%= column_chart Investment.biggest_investment %>
   </div>
 
-  <div class="centered">
-    <table style="border: 1px solid black">
-      <tr>
-            <th scope="col">News Feed</th>
-          </tr>
-      <tr>
-        <td scope="row">  <%= User.headlines %> </td>
-     </tr>
-     <tr>
-       <td scope="row"> <%= User.summary %></td>
-    </tr>
-     <tr>
-       <td scope="row"> <%= User.image_url %></td>
-    </tr>
-      </table>
-  </div>
-<%= link_to "Make a purchase", purchases_path%>
+
+
+
+<%= table_for Article.all, [:headline, :summary, :image_url] do |article| %>
+  <%= field article.headline %>
+  <%= field article.summary %>
+  <%= field article.image_url %>
+<% end %>

@@ -1,5 +1,6 @@
 Investment.destroy_all
 Purchase.destroy_all
+Article.destroy_all
 
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
@@ -80,3 +81,16 @@ consumer_cyclicalstock1 = Investment.create(name: consumer_cyclicalall[1][1][0..
 consumer_cyclicalstock2 = Investment.create(name: consumer_cyclicalall[2][1][0..25], price: consumer_cyclicalall[2][2], purchase: watch, sector: "consumercyclical")
 consumer_cyclicalstock3 = Investment.create(name: consumer_cyclicalall[3][1][0..25], price: consumer_cyclicalall[3][2], purchase: watch, sector: "consumercyclical")
 consumer_cyclicalstock4 = Investment.create(name: consumer_cyclicalall[4][1][0..25], price: consumer_cyclicalall[4][2], purchase: watch, sector: "consumercyclical")
+
+
+# Article Genereation TIMMMMEEEEE!!!
+
+ahead = Article.headlines
+asum = Article.summary
+aimg = Article.image_url
+
+a1 = Article.create(headline: ahead[0], summary: asum[0], image_url: aimg[0])
+a2 = Article.create(headline: ahead[1], summary: asum[1], image_url: aimg[1])
+a3 = Article.create(headline: ahead[2], summary: asum[2], image_url: aimg[2])
+a4 = Article.create(headline: ahead[3], summary: asum[3], image_url: aimg[3])
+a5 = Article.create(headline: ahead[4], summary: asum[4], image_url: aimg[4])

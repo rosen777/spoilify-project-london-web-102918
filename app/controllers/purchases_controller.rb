@@ -1,4 +1,5 @@
 class PurchasesController < ApplicationController
+before_action :require_log_in
   before_action :set_purchase, only: [:show, :edit, :update, :destroy]
 
   # GET /purchases

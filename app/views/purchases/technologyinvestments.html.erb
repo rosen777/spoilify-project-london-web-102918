@@ -2,7 +2,7 @@
 
     <% @technologyinvestments.each do |technologyinvestment| %>
       <div class="card">
-        <p><a href="/technologyinvestments/<%= technologyinvestment.id %>"><%= technologyinvestment.name %></a></p>
+        <p><a href="/investments/<%= technologyinvestment.id %>"><%= technologyinvestment.name %></a></p>
         <p>Current Price: <%= technologyinvestment.price %></p>
         <p>Industry Sector: <%= technologyinvestment.sector %></p>
       </div>
