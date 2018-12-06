@@ -1,0 +1,22 @@
+<p>
+  <strong>Name:</strong>
+  <%= @investment.name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @investment.price %>
+</p>
+
+<p>
+  <strong>Sector:</strong>
+  <%= @investment.sector %>
+</p>
+
+<p>
+  <strong>Purchase:</strong>
+  <%= link_to @investment.purchase.name, purchase_path(@investment.purchase)%>
+</p>
+
+ <%= image_tag '/assets/not-found-image.png
+', width: "200" %>
