@@ -14,7 +14,7 @@
 </p>
 
 <p>
-  <strong>Number of Shares</strong>
+  <strong>Number of Shares:</strong>
   <%= @investment.purchase.price / @investment.price %>
 </p>
 
@@ -26,9 +26,5 @@
  <%= image_tag "#{@investment.imgsrc}", width: "200" %>
 <br>
 <br>
-<%= link_to "Buy #{@investment.name}", "/welcome/home",
-            :class=>"btn btn-primary" %>
 
-<%= link_to(controller: 'user_investments', action: 'new') { "Buy #{@investment.name}"} %>
-
-<%= link_to "Buy #{@investment.name}", user_investments_path(@investment.id, user_id: session[:user_id], investment_id: "#{@investment.id}"), method: :post %>
+<%= link_to "Buy #{@investment.name}", user_investments_path(@investment.id, user_id: session[:user_id], investment_id: "#{@investment.id}"), method: :post, :class=>"btn btn-primary" %>

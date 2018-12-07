@@ -8,5 +8,9 @@
         <p><a href="/investments/<%= consumercyclicalinvestment.id %>"><%= consumercyclicalinvestment.name %></a></p>
         <p><strong>Current Price:</strong> $<%= consumercyclicalinvestment.price %></p>
         <p><strong>Industry Sector:</strong> <%= consumercyclicalinvestment.sector.capitalize %></p>
+        <p>
+          <strong>Shares you need <br> to buy:</strong>
+          <%= number_with_delimiter(consumercyclicalinvestment.purchase.price / consumercyclicalinvestment.price, :delimiter => ',')%>
+        </p>
       </div>
     <% end %>

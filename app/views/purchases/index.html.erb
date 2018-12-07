@@ -10,7 +10,7 @@
         </a>
         <p><a href="/purchases/<%= purchase.id %>"><%= purchase.name %></a></p>
 
-        <p><strong>Price:</strong> $<%= purchase.price %></p>
+        <p><strong>Price:</strong> $<%= number_with_delimiter(purchase.price, :delimiter => ',') %></p>
         <p><strong>Country: </strong><%= purchase.country %></p>
       </div>
     <% end %>

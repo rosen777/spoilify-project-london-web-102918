@@ -8,5 +8,9 @@
         <p><a href="/investments/<%= healthcareinvestment.id %>"><%= healthcareinvestment.name %></a></p>
         <p>Current Price: $<%= healthcareinvestment.price %></p>
         <p>Industry Sector: <%= healthcareinvestment.sector.capitalize %></p>
+        <p>
+          <strong>Shares you need <br> to buy:</strong>
+          <%= number_with_delimiter(healthcareinvestment.purchase.price / healthcareinvestment.price, :delimiter => ',')%>
+        </p>
       </div>
     <% end %>
