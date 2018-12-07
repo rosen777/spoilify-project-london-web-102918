@@ -1,10 +1,14 @@
-  <div class="centered">
-<h1>Hi, <%= @user.name %></h1>
+<div>
+  <span class="user_hi">
+    <h1>Hi, <%= @user.name %></h1>
+  </span>
+  <span class="log_out">
 <%= form_tag ({controller: 'sessions', action: 'destroy', method: 'post'}) do %>
-  <input type=submit value='logout'>
+  <input id='log' type=submit value='logout'>&nbsp;
 <% end %>
-<br>
-  </div>
+  <br>
+  </span>
+</div>
   <div class="centered">
     <strong><p>Your Portfolio is below:</p></strong>
     <% if UserInvestment.all != [] %>

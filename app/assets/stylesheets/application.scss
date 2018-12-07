@@ -33,3 +33,20 @@ body {
 .navbar-inverse .navbar-nav > li > a {
   color: #85bb65;
 }
+
+.centered {
+  text-align: center;
+}
+
+.user_hi {
+  text-align: left;
+}
+
+.log_out {
+  text-align: right;
+}
+
+#log {
+  width: 200px !important;
+  height: 40px !important;
+}
