@@ -13,7 +13,7 @@
     <%= column_chart Investment.biggest_investment %>
   </div>
 
-
+<hr>
 
 
 <%= table_for Article.all, [:headline, :summary, :image_url] do |article| %>
@@ -21,3 +21,9 @@
   <%= field article.summary %>
   <%= field article.image_url %>
 <% end %>
+<hr>
+<br>
+<p>Your Portfolio is below:</p>
+<p>Name: <%= UserInvestment.last.user.name %></p><br>
+<p>Investment: <%= UserInvestment.last.investment.name %></p><br>
+<p>Purchase: <%= UserInvestment.last.investment.purchase.name %></p>
