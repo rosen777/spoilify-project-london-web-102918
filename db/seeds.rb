@@ -1,6 +1,7 @@
 Investment.destroy_all
 Purchase.destroy_all
 Article.destroy_all
+Logo.destroy_all
 
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
@@ -94,3 +95,41 @@ a2 = Article.create(headline: ahead[1], summary: asum[1], image_url: aimg[1])
 a3 = Article.create(headline: ahead[2], summary: asum[2], image_url: aimg[2])
 a4 = Article.create(headline: ahead[3], summary: asum[3], image_url: aimg[3])
 a5 = Article.create(headline: ahead[4], summary: asum[4], image_url: aimg[4])
+
+
+# Making the Logos and their hash
+#can get URL out of this
+keys = Investment.all.map {|i| i.name}
+exxon = Logo.create(imgurl: "https://logo.clearbit.com/exxonmobil.com")
+chevron = Logo.create(imgurl: "https://logo.clearbit.com/chevron.com")
+shell = Logo.create(imgurl: "https://logo.clearbit.com/shell.com")
+shell2 = Logo.create(imgurl: "https://logo.clearbit.com/shell.nl")
+total = Logo.create(imgurl: "https://logo.clearbit.com/total.com")
+jnj = Logo.create(imgurl: "https://logo.clearbit.com/jnj.com")
+uhg = Logo.create(imgurl: "https://logo.clearbit.com/unitedhealthgroup.com")
+pfizer = Logo.create(imgurl: "https://logo.clearbit.com/pfizer.com")
+novartis = Logo.create(imgurl: "https://logo.clearbit.com/novartis.com")
+merck = Logo.create(imgurl: "https://logo.clearbit.com/merck.com")
+microsoft = Logo.create(imgurl: "https://logo.clearbit.com/microsoft.co.uk")
+apple = Logo.create(imgurl: "https://logo.clearbit.com/apple.com")
+alphabet = Logo.create(imgurl: "https://logo.clearbit.com/google.com")
+alphabet2 = Logo.create(imgurl: "https://logo.clearbit.com/google.co.uk")
+facebook = Logo.create(imgurl: "https://logo.clearbit.com/fb.com")
+walmart = Logo.create(imgurl: "https://logo.clearbit.com/walmart.com")
+pg = Logo.create(imgurl: "https://logo.clearbit.com/pg.com")
+coke = Logo.create(imgurl: "https://logo.clearbit.com/cocacola.com")
+pepsi = Logo.create(imgurl: "https://logo.clearbit.com/pepsi.co.uk")
+femsa = Logo.create(imgurl: "https://logo.clearbit.com/femsa.com")
+amazon = Logo.create(imgurl: "https://logo.clearbit.com/amazon.com")
+alibaba = Logo.create(imgurl: "https://logo.clearbit.com/alibaba.com")
+homedepot = Logo.create(imgurl: "https://logo.clearbit.com/homedepot.com")
+toyota = Logo.create(imgurl: "https://logo.clearbit.com/toyota.com")
+disney = Logo.create(imgurl: "https://logo.clearbit.com/disney.com")
+values = Logo.all.map{|l| l.imgurl}
+
+hashoflogos = Hash[keys.zip(values)]
+
+Investment.all.each do |i|
+  name = i.name 
+  i.update(imgsrc: hashoflogos["#{name}"])
+end

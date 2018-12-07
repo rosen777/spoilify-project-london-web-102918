@@ -13,55 +13,59 @@ before_action :require_log_in
   def show
   end
 
-  # GET /purchases/new
-  def new
-    @purchase = Purchase.new
-  end
+#--------------------------------------------------------
+  #IN THE END DONT NEED THESE ROUTES.... MIGHT DO IN THE FUTURE
 
-  # GET /purchases/1/edit
-  def edit
-  end
+  # # GET /purchases/new
+  # def new
+  #   @purchase = Purchase.new
+  # end
+  #
+  # # GET /purchases/1/edit
+  # def edit
+  # end
+  #
+  # # POST /purchases
+  # # POST /purchases.json
+  # def create
+  #   @purchase = Purchase.new(purchase_params)
+  #
+  #   respond_to do |format|
+  #     if @purchase.save
+  #       format.html { redirect_to @purchase, notice: 'Purchase was successfully created.' }
+  #       format.json { render :show, status: :created, location: @purchase }
+  #     else
+  #       format.html { render :new }
+  #       format.json { render json: @purchase.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
+  #
+  # # PATCH/PUT /purchases/1
+  # # PATCH/PUT /purchases/1.json
+  # def update
+  #   respond_to do |format|
+  #     if @purchase.update(purchase_params)
+  #       format.html { redirect_to @purchase, notice: 'Purchase was successfully updated.' }
+  #       format.json { render :show, status: :ok, location: @purchase }
+  #     else
+  #       format.html { render :edit }
+  #       format.json { render json: @purchase.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
+  #
+  # # DELETE /purchases/1
+  # # DELETE /purchases/1.json
+  # def destroy
+  #   @purchase.destroy
+  #   respond_to do |format|
+  #     format.html { redirect_to purchases_url, notice: 'Purchase was successfully destroyed.' }
+  #     format.json { head :no_content }
+  #   end
+  # end
 
-  # POST /purchases
-  # POST /purchases.json
-  def create
-    @purchase = Purchase.new(purchase_params)
-
-    respond_to do |format|
-      if @purchase.save
-        format.html { redirect_to @purchase, notice: 'Purchase was successfully created.' }
-        format.json { render :show, status: :created, location: @purchase }
-      else
-        format.html { render :new }
-        format.json { render json: @purchase.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # PATCH/PUT /purchases/1
-  # PATCH/PUT /purchases/1.json
-  def update
-    respond_to do |format|
-      if @purchase.update(purchase_params)
-        format.html { redirect_to @purchase, notice: 'Purchase was successfully updated.' }
-        format.json { render :show, status: :ok, location: @purchase }
-      else
-        format.html { render :edit }
-        format.json { render json: @purchase.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # DELETE /purchases/1
-  # DELETE /purchases/1.json
-  def destroy
-    @purchase.destroy
-    respond_to do |format|
-      format.html { redirect_to purchases_url, notice: 'Purchase was successfully destroyed.' }
-      format.json { head :no_content }
-    end
-  end
-
+#--------------------------------------------------------
 
   def energyinvestments
     @energyinvestments = Investment.all.select {|i| i.sector == "energy"}
