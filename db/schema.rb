@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_06_203609) do
+ActiveRecord::Schema.define(version: 2018_12_07_110842) do
 
   create_table "articles", force: :cascade do |t|
     t.string "headline"
@@ -27,7 +27,12 @@ ActiveRecord::Schema.define(version: 2018_12_06_203609) do
     t.integer "purchase_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "imgsrc"
     t.index ["purchase_id"], name: "index_investments_on_purchase_id"
+  end
+
+  create_table "logos", force: :cascade do |t|
+    t.string "imgurl"
   end
 
   create_table "purchases", force: :cascade do |t|
@@ -46,15 +51,6 @@ ActiveRecord::Schema.define(version: 2018_12_06_203609) do
     t.datetime "updated_at", null: false
     t.index ["investment_id"], name: "index_user_investments_on_investment_id"
     t.index ["user_id"], name: "index_user_investments_on_user_id"
-  end
-
-  create_table "user_purchases", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "purchase_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["purchase_id"], name: "index_user_purchases_on_purchase_id"
-    t.index ["user_id"], name: "index_user_purchases_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

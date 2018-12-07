@@ -1,7 +1,10 @@
-<h1 style= "color:#85bb65">consumercyclical Investments</h1>
+<h1 style= "color:#85bb65">Commercial Investments</h1>
 
     <% @consumercyclicalinvestments.each do |consumercyclicalinvestment| %>
       <div class="card">
+        <a href="/investments/<%= consumercyclicalinvestment.id %>">
+          <img src="<%= consumercyclicalinvestment.imgsrc %>" alt="purchase Picture" height="115" width="175">
+        </a>
         <p><a href="/investments/<%= consumercyclicalinvestment.id %>"><%= consumercyclicalinvestment.name %></a></p>
         <p>Current Price: <%= consumercyclicalinvestment.price %></p>
         <p>Industry Sector: <%= consumercyclicalinvestment.sector %></p>

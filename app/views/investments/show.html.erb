@@ -18,8 +18,7 @@
   <%= link_to @investment.purchase.name, purchase_path(@investment.purchase)%>
 </p>
 
- <%= image_tag '/assets/not-found-image.png
-', width: "200" %>
+ <%= image_tag "#{@investment.imgsrc}", width: "200" %>
 <br>
 <br>
 <%= link_to "Buy #{@investment.name}", "/welcome/home",
