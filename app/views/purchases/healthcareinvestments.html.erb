@@ -6,7 +6,7 @@
           <img src="<%= healthcareinvestment.imgsrc %>" alt="purchase Picture" height="115" width="175">
         </a>
         <p><a href="/investments/<%= healthcareinvestment.id %>"><%= healthcareinvestment.name %></a></p>
-        <p>Current Price: <%= healthcareinvestment.price %></p>
-        <p>Industry Sector: <%= healthcareinvestment.sector %></p>
+        <p>Current Price: $<%= healthcareinvestment.price %></p>
+        <p>Industry Sector: <%= healthcareinvestment.sector.capitalize %></p>
       </div>
     <% end %>
