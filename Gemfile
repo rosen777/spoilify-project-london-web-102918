@@ -74,3 +74,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #We added ---- GEMS --- specific to the project
 
   gem 'simple_table_for'
+
+  gem 'clearbit'

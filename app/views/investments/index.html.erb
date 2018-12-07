@@ -2,6 +2,9 @@
 
     <% @investments.each do |investment| %>
       <div class="card">
+        <a href="/investments/<%= investment.id %>">
+          <img src="<%= investment.imgsrc %>" alt="purchase Picture" height="115" width="175">
+        </a>
         <p><a href="/investments/<%= investment.id %>"><%= investment.name %></a></p>
         <p>Current Price: <%= investment.price %></p>
         <p>Industry Sector: <%= investment.sector %></p>

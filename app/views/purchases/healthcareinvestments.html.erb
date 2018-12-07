@@ -1,7 +1,10 @@
-<h1 style= "color:#85bb65">healthcare Investments</h1>
+<h1 style= "color:#85bb65">Healthcare Investments</h1>
 
     <% @healthcareinvestments.each do |healthcareinvestment| %>
       <div class="card">
+        <a href="/investments/<%= healthcareinvestment.id %>">
+          <img src="<%= healthcareinvestment.imgsrc %>" alt="purchase Picture" height="115" width="175">
+        </a>
         <p><a href="/investments/<%= healthcareinvestment.id %>"><%= healthcareinvestment.name %></a></p>
         <p>Current Price: <%= healthcareinvestment.price %></p>
         <p>Industry Sector: <%= healthcareinvestment.sector %></p>
