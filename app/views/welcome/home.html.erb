@@ -37,8 +37,10 @@
 <% end %>
 <hr>
 <br>
+<% if UserInvestment.all != [] %>
 <p>Your Portfolio is below:</p>
 <p>Name: <%= UserInvestment.last.user.name %></p><br>
 <p>Investment: <%= UserInvestment.last.investment.name %></p><br>
 <p>Purchase: <%= UserInvestment.last.investment.purchase.name %></p>
 <p>Shares: <%= UserInvestment.last.investment.purchase.price / UserInvestment.last.investment.price %></p>
+<% end %>
