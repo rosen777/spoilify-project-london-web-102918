@@ -7,7 +7,7 @@
 
 <p>
   <strong>Price:</strong>
-  <%= @purchase.price %>
+  $<%= number_with_delimiter(@purchase.price, :delimiter => ',') %>
 </p>
 
 <p>

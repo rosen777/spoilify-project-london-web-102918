@@ -6,7 +6,7 @@
           <img src="<%= consumercyclicalinvestment.imgsrc %>" alt="purchase Picture" height="115" width="175">
         </a>
         <p><a href="/investments/<%= consumercyclicalinvestment.id %>"><%= consumercyclicalinvestment.name %></a></p>
-        <p>Current Price: <%= consumercyclicalinvestment.price %></p>
-        <p>Industry Sector: <%= consumercyclicalinvestment.sector %></p>
+        <p><strong>Current Price:</strong> $<%= consumercyclicalinvestment.price %></p>
+        <p><strong>Industry Sector:</strong> <%= consumercyclicalinvestment.sector.capitalize %></p>
       </div>
     <% end %>

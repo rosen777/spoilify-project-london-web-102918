@@ -9,7 +9,8 @@
           <img src="<%= purchase.imgsrc %>" alt="purchase Picture" height="115" width="175">
         </a>
         <p><a href="/purchases/<%= purchase.id %>"><%= purchase.name %></a></p>
-        <p><%= purchase.price %></p>
-        <p><%= purchase.country %></p>
+
+        <p><strong>Price:</strong> $<%= purchase.price %></p>
+        <p><strong>Country: </strong><%= purchase.country %></p>
       </div>
     <% end %>

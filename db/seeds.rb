@@ -40,7 +40,7 @@ Logo.destroy_all
 toilet = Purchase.create(name: "Catellan Golden Toilet", price: 2527872, country: "Kuwait", imgsrc: "https://i.ytimg.com/vi/IWGj8CvH82E/maxresdefault.jpg")
 shoes = Purchase.create(name: "Nike Air MAG BTTF Edition", price: 37654, country: "USA", imgsrc: "https://plugin-magazine.com/media/cache/upload/Photo/2015/10/22/air_mag_front_pair_v2_native_1600_biggalleryimage.jpg")
 watch = Purchase.create(name: "Montegrappa Chaos Golden", price: 52985, country: "Uzbekistan", imgsrc: "https://whichwatch.org/wp-content/uploads/2015/12/Montegrappa-Chaos-Gold-Watch.jpg")
-jet = Purchase.create(name: "Custom Boeing 747-8I", price: 27000000, country: "USA", imgsrc: "http://3.bp.blogspot.com/-gudqlEhcOp4/UOVKp_FH1YI/AAAAAAAAAy8/uRJTEllJ-Gk/s640/private-jet-interiors.jpg")
+jet = Purchase.create(name: "Custom Boeing 747-8I", price: 27000000, country: "Cayman Islands", imgsrc: "http://3.bp.blogspot.com/-gudqlEhcOp4/UOVKp_FH1YI/AAAAAAAAAy8/uRJTEllJ-Gk/s640/private-jet-interiors.jpg")
 jetpack = Purchase.create(name: "Jetsuit by Gravity Industries", price: 340000, country: "UK", imgsrc: "https://static.highsnobiety.com/wp-content/uploads/2018/07/27210700/gravity-industries-jet-suit-001-480x320.jpg")
 
 energyall = Investment.investment_energy2
@@ -130,6 +130,6 @@ values = Logo.all.map{|l| l.imgurl}
 hashoflogos = Hash[keys.zip(values)]
 
 Investment.all.each do |i|
-  name = i.name 
+  name = i.name
   i.update(imgsrc: hashoflogos["#{name}"])
 end
