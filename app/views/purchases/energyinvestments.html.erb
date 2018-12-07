@@ -8,5 +8,9 @@
         <p><a href="/investments/<%= energyinvestment.id %>"><%= energyinvestment.name %></a></p>
         <p>Current Price: $<%= energyinvestment.price %></p>
         <p>Industry Sector: <%= energyinvestment.sector.capitalize %></p>
+        <p>
+          <strong>Shares you need <br> to buy:</strong>
+          <%= number_with_delimiter(energyinvestment.purchase.price / energyinvestment.price, :delimiter => ',')%>
+        </p>
       </div>
     <% end %>

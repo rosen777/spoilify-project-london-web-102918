@@ -3,15 +3,27 @@
 <%= form_tag ({controller: 'sessions', action: 'destroy', method: 'post'}) do %>
   <input type=submit value='logout'>
 <% end %>
+<br>
   </div>
+  <div class="centered">
+    <strong><p>Your Portfolio is below:</p></strong>
+    <% if UserInvestment.all != [] %>
+    <p><strong>User's name: </strong><%= UserInvestment.last.user.name %></p>
+    <p><strong>Investment: </strong><%= UserInvestment.last.investment.name %></p>
+    <p><strong>Purchase: </strong><%= UserInvestment.last.investment.purchase.name %></p>
+    <p><strong>Number of shares purchased: </strong><%= UserInvestment.last.investment.purchase.price / UserInvestment.last.investment.price %> shares</p>
+    <% end %>
+  </div>
+
 
   <div class="centered">
     <br>
     <%= link_to "Make a purchase", purchases_path,
                 :class=>"btn btn-primary" %>
     <br>
+    <br>
     <% if @current_user.investments.last != nil %>
-    <% if @current_user.investments.last.sector == "consumercyclical"  %>
+    <% if @current_user.investments.last.sector == "energy"  %>
       <%= column_chart Investment.investment_energy3 %>
     <% elsif @current_user.investments.last.sector == "healthcare" %>
     <%= column_chart Investment.investment_health_care3 %>
@@ -33,15 +45,6 @@
 <%= table_for Article.all, [:headline, :summary, :image_url] do |article| %>
   <%= field article.headline %>
   <%= field article.summary %>
-  <%= field article.image_url %>
+  <%= field image_tag article.image_url %>
 <% end %>
 <hr>
-<br>
-<% if UserInvestment.all != [] %>
-<p>Your Portfolio is below:</p>
-<% if UserInvestment.all != [] %>
-<p>Name: <%= UserInvestment.last.user.name %></p><br>
-<p>Investment: <%= UserInvestment.last.investment.name %></p><br>
-<p>Purchase: <%= UserInvestment.last.investment.purchase.name %></p>
-<p>Shares: <%= UserInvestment.last.investment.purchase.price / UserInvestment.last.investment.price %></p>
-<% end %>

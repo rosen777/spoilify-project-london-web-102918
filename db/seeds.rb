@@ -90,11 +90,11 @@ ahead = Article.headlines
 asum = Article.summary
 aimg = Article.image_url
 
-a1 = Article.create(headline: ahead[0], summary: asum[0], image_url: aimg[0])
-a2 = Article.create(headline: ahead[1], summary: asum[1], image_url: aimg[1])
-a3 = Article.create(headline: ahead[2], summary: asum[2], image_url: aimg[2])
-a4 = Article.create(headline: ahead[3], summary: asum[3], image_url: aimg[3])
-a5 = Article.create(headline: ahead[4], summary: asum[4], image_url: aimg[4])
+a1 = Article.create(headline: ahead[0], summary: asum[0], image_url: "https://logo.clearbit.com/wsj.com")
+a2 = Article.create(headline: ahead[1], summary: asum[1], image_url: "https://logo.clearbit.com/cnn.com")
+a3 = Article.create(headline: ahead[2], summary: asum[2], image_url: "https://logo.clearbit.com/bloomberg.com")
+a4 = Article.create(headline: ahead[3], summary: asum[3], image_url: "https://logo.clearbit.com/ft.com")
+a5 = Article.create(headline: ahead[4], summary: asum[4], image_url: "https://logo.clearbit.com/wsj.com")
 
 
 # Making the Logos and their hash
